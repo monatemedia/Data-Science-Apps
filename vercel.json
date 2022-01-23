@@ -1,0 +1,16 @@
+{
+    "version": 1,
+    "builds": [
+        {
+            "src": "*.py",
+            "use": "@monatemedia/Data-Science-Apps"
+        }
+    ],
+    "routes": [
+        {
+            "src": "(.*)",
+            "dest": "homeLoanApp.py"
+        }
+    ]
+  }
+  
