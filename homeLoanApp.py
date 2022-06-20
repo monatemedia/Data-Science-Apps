@@ -119,15 +119,6 @@ st.write('''
 | ''' + str(mortgage) + ''' |''' + str(parameters.interest[0]) + '''|''' + str(years) + ''' |''' + str(start_date) + '''|
 ''')
 
-st.header('Cost of Credit')
-
-st.line_chart(df[["Ending Balance", "Cumulative Interest"]])
-
-st.write('''
-| Capital Borrowed          | Cumulative Interest                       |
-| --------------------------|:-----------------------------------------:|
-| ''' + str(mortgage) + ''' |''' + str(int(previous_cumulative)) + '''  |
-''')
 
 st.header('Monthly Payment Breakdown')
 
@@ -139,6 +130,16 @@ st.write('''
 | Monthly Mortgage Payment  |''' + str(int(pmt)) + '''  | ''' + str(int(pmt)) + '''                 |
 | Interest Payment          |''' + str(int(ipmt)) + ''' | ''' + str(int(interest_paid)) + '''       |
 | Principle Payment         |''' + str(int(ppmt)) + ''' | ''' + str(int(final_principal_paid)) + '''|
+''')
+
+st.header('Cost of Credit')
+
+st.line_chart(df[["Ending Balance", "Cumulative Interest"]])
+
+st.write('''
+| Capital Borrowed          | Cumulative Interest                       |Total Repayment                                        |
+| --------------------------|:-----------------------------------------:|:-----------------------------------------------------:|
+| ''' + str(mortgage) + ''' |''' + str(int(previous_cumulative)) + '''  |''' + str(int(mortgage + previous_cumulative)) + '''   |
 ''')
 
 
