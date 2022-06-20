@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "version": 2,
     "builds": [
@@ -14,3 +15,21 @@
     ]
   }
   
+=======
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "homeLoanApp.py",
+            "use": "@monatemedia/Data-Science-Apps"
+        }
+    ],
+    "routes": [
+        {
+            "src": "(.*)",
+            "dest": "homeLoanApp.py"
+        }
+    ]
+  }
+  
+>>>>>>> 96ac79b2222d2f6740ad499f676d7024614fb2ac
