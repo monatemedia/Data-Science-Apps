@@ -7,7 +7,7 @@ on:
     branches: ["main"]
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ghcr.io/\${{ github.actor }}/Data-Science-Apps:latest
+  IMAGE_NAME: ghcr.io/\${{ github.actor }}/python-streamlit-mortgate-calculator:latest
 jobs:
   publish:
     name: Publish Docker Image
