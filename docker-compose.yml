@@ -1,0 +1,15 @@
+services:
+  python-streamlit-mortgage-calculator:
+    build: .
+    container_name: python-streamlit-mortgage-calculator
+    image: ghcr.io/monatemedia/python-streamlit-mortgage-calculator:latest
+    environment:
+      VIRTUAL_HOST: mortgage-calculator.monatemedia.com # Tell nginx-proxy to route traffic based on the service name eg. hello-world.monatemedia.com
+      LETSENCRYPT_HOST: mortgage-calculator.monatemedia.com # Enable Let's Encrypt SSL for this domain
+      VIRTUAL_PORT: 8501 # Tell nginx-proxy that the container serves on port 8000
+    networks:
+      - proxy-network
+
+networks:
+  proxy-network:
+    external: true
